@@ -667,6 +667,7 @@ header {
   background-color: white;
   border-radius: 10px;
   font-family: "Merriweather", serif;
+  box-shadow: 5px 5px 1px 5px #404040;
   width: 80%;
   left: calc(50% - 40%);
   min-height: 95%;
@@ -763,19 +764,19 @@ header {
   }
 }
 
-/* line 25, F:/Github/treehouse-frontend-project08/scss/components/_overlay.scss */
+/* line 26, F:/Github/treehouse-frontend-project08/scss/components/_overlay.scss */
 .modal .user__address {
   text-transform: capitalize;
   text-align: center;
 }
 
-/* line 29, F:/Github/treehouse-frontend-project08/scss/components/_overlay.scss */
+/* line 30, F:/Github/treehouse-frontend-project08/scss/components/_overlay.scss */
 .modal p {
   margin-top: 3px;
   margin-bottom: 0;
 }
 
-/* line 33, F:/Github/treehouse-frontend-project08/scss/components/_overlay.scss */
+/* line 34, F:/Github/treehouse-frontend-project08/scss/components/_overlay.scss */
 .modal hr {
   width: 100%;
   height: 0;

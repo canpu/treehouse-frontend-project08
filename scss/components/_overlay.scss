@@ -15,6 +15,7 @@
   background-color: white;
   border-radius: $radius-card;
   font-family: $font-family-primary;
+  box-shadow: 5px 5px 1px 5px darken(grey, 25%);
   @include allmedia("width", $widths-modal);
   @include allmedia("left", $lefts-overlay);
   @include allmedia("min-height", $heights-modal);
