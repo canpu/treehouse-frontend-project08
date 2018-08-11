@@ -1,0 +1,31 @@
+.button {
+  @include modifier("close") {
+    display: inline-block;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: transform $transition-time linear,
+                color $transition-time linear;
+    margin-left: auto;
+    &:hover {
+      transform: scale(1.1);
+    }
+    &:active {
+      color: lighten(red, 25%);
+    }
+  }
+  @include modifier("small") {
+    @extend %button;
+    width: 45%;
+    &:not([class*="button--negative"]) {
+      background-color: $color-bg-primary-lighter;
+    }
+    &[class*="button--negative"] {
+      background-color: grey;
+    }
+  }
+  @include modifier("large") {
+    @extend %button;
+    width: 100%;
+    background-color: $color-bg-primary-lighter;
+  }
+}

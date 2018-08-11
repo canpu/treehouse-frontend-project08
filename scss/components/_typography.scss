@@ -1,0 +1,35 @@
+main {
+  grid-area: main-region;
+  @include grid($rows: repeat(3, auto));
+}
+
+body {
+  @include allmedia("grid-template-columns", $columns-body);
+  @include grid($layout:  "main-header" "navbar" "main-region", $align: center, $columns: repeat(3, 100%));
+  @include media('tablet') {
+    @include grid($layout:  "main-header main-header"
+                            "navbar main-region", $align: center, $rows: $rows-body);
+  }
+}
+
+.wrapper__main {
+  display: grid;
+  width: 100%;
+  @include grid($layout:  "traffic"
+                          "daily-traffic"
+                          "mobile-users"
+                          "social-stats"
+                          "new-members"
+                          "recent-activity"
+                          "message-user"
+                          "settings",
+                $columns: repeat(1, 1fr));
+  @include media("tablet") {
+    @include grid($layout:  "traffic traffic"
+                            "daily-traffic mobile-users"
+                            "social-stats social-stats"
+                            "new-members recent-activity"
+                            "message-user settings",
+                  $columns: repeat(2, 1fr));
+  }
+}
