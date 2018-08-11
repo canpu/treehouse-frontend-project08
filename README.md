@@ -10,7 +10,7 @@ TreeHouse FrontEnd Project 8 - Use an API to Create an Employee Directory
 * This webpage display an imaginary list of employees.
 * The page layout is made by CSS grid.
 * The user can click an employee to view more details in a modal window.
-* The user can navigate through all employees in the modal window by either clicking the left or right arrows or by using keyboards.
+* The user can navigate through all employees in the modal window by either clicking the left or right arrows or by using keyboards (left, right and escape).
 * The user can filter employees by their names in the searchbox.
 
 ## Techniques Involed
