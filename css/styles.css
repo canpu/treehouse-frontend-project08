@@ -1,0 +1,994 @@
+/* Breakpoints */
+/* Sizes */
+/* Colors */
+/* Fonts */
+/* Animation */
+/* Derived */
+/* Layout */
+/* Media Query */
+/* BEM */
+/* line 1, F:/Github/treehouse-frontend-project08/scss/utilities/_placeholders.scss */
+.button__previous, .button__next, .button__close {
+  cursor: pointer;
+  background-color: white;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1.5px solid white;
+  top: calc(50% - 10px);
+  fill: black;
+  transition-property: fill, background-color, border, color;
+  transition-duration: 0.25s;
+  transition-timing-function: linear;
+}
+
+@media (min-width: 768px) {
+  /* line 1, F:/Github/treehouse-frontend-project08/scss/utilities/_placeholders.scss */
+  .button__previous, .button__next, .button__close {
+    top: calc(50% - 15px);
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 1, F:/Github/treehouse-frontend-project08/scss/utilities/_placeholders.scss */
+  .button__previous, .button__next, .button__close {
+    top: calc(50% - 20px);
+  }
+}
+
+/* line 12, F:/Github/treehouse-frontend-project08/scss/utilities/_placeholders.scss */
+.button__previous:hover, .button__next:hover, .button__close:hover {
+  fill: #4b4b4b;
+  color: #4b4b4b;
+}
+
+/* line 16, F:/Github/treehouse-frontend-project08/scss/utilities/_placeholders.scss */
+.button__previous:active, .button__next:active, .button__close:active {
+  fill: white;
+  color: white;
+  background-color: black;
+  border: 1.5px solid black;
+}
+
+/* line 22, F:/Github/treehouse-frontend-project08/scss/utilities/_placeholders.scss */
+.button__previous svg, .button__next svg, .button__close svg {
+  width: 100%;
+  height: 100%;
+}
+
+/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+/* line 11, F:/Github/treehouse-frontend-project08/scss/base/normalize.css */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+/* line 23, F:/Github/treehouse-frontend-project08/scss/base/normalize.css */
+body {
+  margin: 0;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+/* line 32, F:/Github/treehouse-frontend-project08/scss/base/normalize.css */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+/* line 45, F:/Github/treehouse-frontend-project08/scss/base/normalize.css */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 56, F:/Github/treehouse-frontend-project08/scss/base/normalize.css */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+/* line 68, F:/Github/treehouse-frontend-project08/scss/base/normalize.css */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+/* line 77, F:/Github/treehouse-frontend-project08/scss/base/normalize.css */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+/* line 87, F:/Github/treehouse-frontend-project08/scss/base/normalize.css */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 97, F:/Github/treehouse-frontend-project08/scss/base/normalize.css */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+/* line 108, F:/Github/treehouse-frontend-project08/scss/base/normalize.css */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+/* line 117, F:/Github/treehouse-frontend-project08/scss/base/normalize.css */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 125, F:/Github/treehouse-frontend-project08/scss/base/normalize.css */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 129, F:/Github/treehouse-frontend-project08/scss/base/normalize.css */
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+/* line 140, F:/Github/treehouse-frontend-project08/scss/base/normalize.css */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+/* line 152, F:/Github/treehouse-frontend-project08/scss/base/normalize.css */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+/* line 168, F:/Github/treehouse-frontend-project08/scss/base/normalize.css */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+/* line 178, F:/Github/treehouse-frontend-project08/scss/base/normalize.css */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+/* line 187, F:/Github/treehouse-frontend-project08/scss/base/normalize.css */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+/* line 198, F:/Github/treehouse-frontend-project08/scss/base/normalize.css */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+/* line 210, F:/Github/treehouse-frontend-project08/scss/base/normalize.css */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+/* line 221, F:/Github/treehouse-frontend-project08/scss/base/normalize.css */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+/* line 232, F:/Github/treehouse-frontend-project08/scss/base/normalize.css */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+/* line 245, F:/Github/treehouse-frontend-project08/scss/base/normalize.css */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+/* line 253, F:/Github/treehouse-frontend-project08/scss/base/normalize.css */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+/* line 262, F:/Github/treehouse-frontend-project08/scss/base/normalize.css */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+/* line 272, F:/Github/treehouse-frontend-project08/scss/base/normalize.css */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+/* line 282, F:/Github/treehouse-frontend-project08/scss/base/normalize.css */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+/* line 291, F:/Github/treehouse-frontend-project08/scss/base/normalize.css */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+/* line 300, F:/Github/treehouse-frontend-project08/scss/base/normalize.css */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+/* line 312, F:/Github/treehouse-frontend-project08/scss/base/normalize.css */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+/* line 320, F:/Github/treehouse-frontend-project08/scss/base/normalize.css */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+/* line 331, F:/Github/treehouse-frontend-project08/scss/base/normalize.css */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+/* line 339, F:/Github/treehouse-frontend-project08/scss/base/normalize.css */
+[hidden] {
+  display: none;
+}
+
+/* line 1, F:/Github/treehouse-frontend-project08/scss/base/_base.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 5, F:/Github/treehouse-frontend-project08/scss/base/_base.scss */
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
+/* line 10, F:/Github/treehouse-frontend-project08/scss/base/_base.scss */
+main {
+  width: 100%;
+  z-index: 0;
+}
+
+/* line 1, F:/Github/treehouse-frontend-project08/scss/components/_header.scss */
+header {
+  width: auto;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+@media (min-width: 768px) {
+  /* line 1, F:/Github/treehouse-frontend-project08/scss/components/_header.scss */
+  header {
+    padding: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 1, F:/Github/treehouse-frontend-project08/scss/components/_header.scss */
+  header {
+    padding: 25px;
+  }
+}
+
+/* line 8, F:/Github/treehouse-frontend-project08/scss/components/_header.scss */
+.header__page {
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+}
+
+/* line 13, F:/Github/treehouse-frontend-project08/scss/components/_header.scss */
+.searchbox {
+  display: inline-block;
+  height: 35px;
+  width: 80%;
+  border-radius: 5px;
+  padding: 5px;
+  border: 2px solid gray;
+  font-family: "Merriweather", serif;
+  font-size: 12px;
+  background-image: url("../images/search.svg");
+  background-repeat: no-repeat;
+  background-position: right 0 bottom 50%;
+}
+
+@media (min-width: 768px) {
+  /* line 13, F:/Github/treehouse-frontend-project08/scss/components/_header.scss */
+  .searchbox {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 13, F:/Github/treehouse-frontend-project08/scss/components/_header.scss */
+  .searchbox {
+    width: 60%;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 13, F:/Github/treehouse-frontend-project08/scss/components/_header.scss */
+  .searchbox {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 13, F:/Github/treehouse-frontend-project08/scss/components/_header.scss */
+  .searchbox {
+    font-size: 14px;
+  }
+}
+
+/* line 25, F:/Github/treehouse-frontend-project08/scss/components/_header.scss */
+.searchbox:focus {
+  outline: none;
+}
+
+/* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+.user__image {
+  grid-area: image;
+  border-radius: 50%;
+}
+
+/* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+.user__name {
+  grid-area: name;
+  text-transform: capitalize;
+  color: black;
+  font-size: 12px;
+  transition: color 0.25s linear;
+}
+
+@media (min-width: 768px) {
+  /* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+  .user__name {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+  .user__name {
+    font-size: 14px;
+  }
+}
+
+/* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+.user__email {
+  grid-area: email;
+}
+
+/* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+.user__city {
+  grid-area: city;
+  text-transform: capitalize;
+}
+
+/* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+.user__card {
+  display: grid;
+  grid-template-areas: "image name" "image email" "image city";
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 60px calc(100% - 63px);
+  grid-template-rows: auto 13px auto;
+  border-radius: 10px;
+  border: 2px solid #9b9b9b;
+  background-color: white;
+  color: #4b4b4b;
+  font-size: 7px;
+  cursor: pointer;
+  padding: 3px;
+  grid-column-gap: 3px;
+  overflow: hidden;
+  transition-duration: 0.25s;
+  transition-timing-function: linear;
+  transition-property: transform, background-color, color, box-shadow;
+  transform-origin: 100% 100%;
+}
+
+@media (min-width: 768px) {
+  /* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+  .user__card {
+    grid-template-columns: 70px calc(100% - 73px);
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+  .user__card {
+    grid-template-columns: 80px calc(100% - 83px);
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+  .user__card {
+    grid-template-rows: auto 14px auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+  .user__card {
+    grid-template-rows: auto 15px auto;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+  .user__card {
+    font-size: 8px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+  .user__card {
+    font-size: 9px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+  .user__card {
+    padding: 7px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+  .user__card {
+    padding: 10px;
+  }
+}
+
+/* line 39, F:/Github/treehouse-frontend-project08/scss/components/_card.scss */
+.user__card:hover {
+  transform: translate(-2px, -2px);
+  color: white;
+  background-color: #9b9b9b;
+  box-shadow: 2px 2px 4px 0px #404040, 1px 1px 1px 1px black;
+}
+
+/* line 40, F:/Github/treehouse-frontend-project08/scss/components/_card.scss */
+.user__card:hover .user__name {
+  color: white;
+}
+
+/* line 1, F:/Github/treehouse-frontend-project08/scss/components/_overlay.scss */
+.overlay {
+  background-color: rgba(155, 155, 155, 0.85);
+  color: #4b4b4b;
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* line 13, F:/Github/treehouse-frontend-project08/scss/components/_overlay.scss */
+.modal {
+  position: fixed;
+  background-color: white;
+  border-radius: 10px;
+  font-family: "Merriweather", serif;
+  width: 80%;
+  left: calc(50% - 40%);
+  min-height: 95%;
+  top: calc(50% - 47.5%);
+  font-size: 7px;
+  padding: 15px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  /* line 13, F:/Github/treehouse-frontend-project08/scss/components/_overlay.scss */
+  .modal {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 13, F:/Github/treehouse-frontend-project08/scss/components/_overlay.scss */
+  .modal {
+    width: 40%;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 13, F:/Github/treehouse-frontend-project08/scss/components/_overlay.scss */
+  .modal {
+    left: calc(50% - 30%);
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 13, F:/Github/treehouse-frontend-project08/scss/components/_overlay.scss */
+  .modal {
+    left: calc(50% - 20%);
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 13, F:/Github/treehouse-frontend-project08/scss/components/_overlay.scss */
+  .modal {
+    min-height: 85%;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 13, F:/Github/treehouse-frontend-project08/scss/components/_overlay.scss */
+  .modal {
+    min-height: 75%;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 13, F:/Github/treehouse-frontend-project08/scss/components/_overlay.scss */
+  .modal {
+    top: calc(50% - 42.5%);
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 13, F:/Github/treehouse-frontend-project08/scss/components/_overlay.scss */
+  .modal {
+    top: calc(50% - 37.5%);
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 13, F:/Github/treehouse-frontend-project08/scss/components/_overlay.scss */
+  .modal {
+    font-size: 8px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 13, F:/Github/treehouse-frontend-project08/scss/components/_overlay.scss */
+  .modal {
+    font-size: 9px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 13, F:/Github/treehouse-frontend-project08/scss/components/_overlay.scss */
+  .modal {
+    padding: 20px 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 13, F:/Github/treehouse-frontend-project08/scss/components/_overlay.scss */
+  .modal {
+    padding: 30px 20px;
+  }
+}
+
+/* line 25, F:/Github/treehouse-frontend-project08/scss/components/_overlay.scss */
+.modal .user__address {
+  text-transform: capitalize;
+  text-align: center;
+}
+
+/* line 29, F:/Github/treehouse-frontend-project08/scss/components/_overlay.scss */
+.modal p {
+  margin-top: 3px;
+  margin-bottom: 0;
+}
+
+/* line 33, F:/Github/treehouse-frontend-project08/scss/components/_overlay.scss */
+.modal hr {
+  width: 100%;
+  height: 0;
+  border-top: 1px solid #9b9b9b;
+}
+
+/* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+.button__previous {
+  position: fixed;
+  left: 0;
+  width: 20px;
+  height: 20px;
+}
+
+@media (min-width: 768px) {
+  /* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+  .button__previous {
+    left: 5%;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+  .button__previous {
+    left: 10%;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+  .button__previous {
+    width: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+  .button__previous {
+    width: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+  .button__previous {
+    height: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+  .button__previous {
+    height: 40px;
+  }
+}
+
+/* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+.button__next {
+  position: fixed;
+  right: 0;
+  width: 20px;
+  height: 20px;
+}
+
+@media (min-width: 768px) {
+  /* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+  .button__next {
+    right: 5%;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+  .button__next {
+    right: 10%;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+  .button__next {
+    width: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+  .button__next {
+    width: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+  .button__next {
+    height: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+  .button__next {
+    height: 40px;
+  }
+}
+
+/* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+.button__close {
+  position: absolute;
+  user-select: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  right: 7.5px;
+  top: 7.5px;
+}
+
+@media (min-width: 768px) {
+  /* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+  .button__close {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+  .button__close {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+  .button__close {
+    right: 8px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+  .button__close {
+    right: 8.5px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+  .button__close {
+    top: 8px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 52, F:/Github/treehouse-frontend-project08/scss/utilities/_mixins.scss */
+  .button__close {
+    top: 8.5px;
+  }
+}
+
+/* line 1, F:/Github/treehouse-frontend-project08/scss/components/_typography.scss */
+main {
+  background-color: #ebebeb;
+  font-family: "Merriweather", serif;
+  padding: 3%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+}
+
+@media (min-width: 768px) {
+  /* line 1, F:/Github/treehouse-frontend-project08/scss/components/_typography.scss */
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 1, F:/Github/treehouse-frontend-project08/scss/components/_typography.scss */
+  main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* line 14, F:/Github/treehouse-frontend-project08/scss/components/_typography.scss */
+main .user__name {
+  margin-bottom: 0;
+}
+
+/* line 17, F:/Github/treehouse-frontend-project08/scss/components/_typography.scss */
+main .user__city {
+  margin-top: 0;
+}
+
+/* line 20, F:/Github/treehouse-frontend-project08/scss/components/_typography.scss */
+main .user__image {
+  width: 100%;
+  height: 60px;
+}
+
+@media (min-width: 768px) {
+  /* line 20, F:/Github/treehouse-frontend-project08/scss/components/_typography.scss */
+  main .user__image {
+    height: 70px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 20, F:/Github/treehouse-frontend-project08/scss/components/_typography.scss */
+  main .user__image {
+    height: 80px;
+  }
+}
+
+/*# sourceMappingURL=../css/styles.map */

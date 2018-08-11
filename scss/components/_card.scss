@@ -1,0 +1,50 @@
+.user {
+  @include element("image") {
+    grid-area: image;
+    border-radius: 50%;
+  }
+  @include element("name") {
+    grid-area: name;
+    text-transform: capitalize;
+    color: $color-txt-darker;
+    @include allmedia("font-size", $fonts-size-md);
+    transition: color $transition-time linear;
+  }
+  @include element("email") {
+    grid-area: email;
+  }
+  @include element("city") {
+    grid-area: city;
+    text-transform: capitalize;
+  }
+  @include element("card") {
+    @include grid($layout: "image name"
+                           "image email"
+                           "image city", $align: center, $just: center);
+    @include allmedia("grid-template-columns", $card-columns);
+    @include allmedia("grid-template-rows", $card-rows);
+    border-radius: $radius-card;
+    border: 2px solid $color-bg-darker;
+    background-color: white;
+    color: $color-txt-lighter;
+    @include allmedia("font-size", $fonts-size-sm);
+    cursor: pointer;
+    @include allmedia("padding", $paddings-card);
+    grid-column-gap: $gutter-txt;
+    overflow: hidden;
+    transition-duration: $transition-time;
+    transition-timing-function: linear;
+    transition-property: transform, background-color, color, box-shadow;
+    transform-origin: 100% 100%;
+    &:hover {
+      .user__name {
+        color: white;
+      }
+      transform: translate(-2px, -2px);
+      color: white;
+      background-color: $color-bg-darker;
+      box-shadow: 2px 2px 4px 0px lighten(black, 25%),
+                  1px 1px 1px 1px black;
+    }
+  }
+}

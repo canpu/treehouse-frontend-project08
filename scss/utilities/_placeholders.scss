@@ -1,79 +1,26 @@
-%icon {
-  @include flex($disp: block);
-  max-width: $icon-size;
-  max-height: $icon-size;
-  width: auto;
-  height: auto;
-  background: none;
-}
-
 %button {
-  height: $height-button;
-  display: inline-block;
   cursor: pointer;
-  border: none;
-  border-radius: $radius-lg;
-  font-family: $font-family-primary;
-  font-size: $font-size-md;
-  color: $color-txt-primary;
-  transition-property: box-shadow font-weight;
+  background-color: white;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1.5px solid white;
+  @include allmedia("top", $offsets-vertical-button);
+  fill: $color-txt-darker;
+  transition-property: fill, background-color, border, color;
   transition-duration: $transition-time;
   transition-timing-function: linear;
-  &:hover, &:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px $color-bg-primary-darker;
+  &:hover {
+    fill: $color-txt-lighter;
+    color: $color-txt-lighter;
   }
   &:active {
-    font-weight: bold;
+    fill: white;
+    color: white;
+    background-color: $color-txt-darker;
+    border: 1.5px solid $color-txt-darker;
   }
-}
-
-%message {
-  display: block;
-  padding-left: 5px;
-  padding-right: 5px;
-  width: 100%;
-  font-size: $font-size-sm;
-  font-family: $font-family-secondary;
-  transition-duration: $transition-time;
-  transition-timing-function: linear;
-  transition-property: font-size, border, box-shadow;
-  border-radius: $radius-md;
-  box-shadow: none;
-  border: 1px solid $color-grid;
-  &:focus {
-    outline: none;
-    font-size: $font-size-md;
-    border: 1px solid $color-bg-primary-lighter;
-    box-shadow: 0 0 1px 1px $color-bg-primary-lighter;
-  }
-}
-
-%dot {
-  display: inline-block;
-  position: absolute;
-  top: -4px;
-  right: -4px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  transition: background-color $transition-time linear;
-}
-
-%submit-hint {
-  position: fixed;
-  top: calc(50% - 50px);
-  left: calc(50% - 150px);
-  border-radius: $radius-lg;
-  width: 250px;
-  height: 100px;
-  z-index: 100;
-  @include flex($dir: row, $align-coaxis: center, $just: center);
-  color: $color-txt-primary;
-  & p {
-    display: inline-block;
-    font-size: $font-size-md;
-    font-family: $font-family-primary;
-    text-align: center;
+  svg {
+    width: 100%;
+    height: 100%;
   }
 }

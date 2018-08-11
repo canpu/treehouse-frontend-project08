@@ -10,116 +10,108 @@ $breakpoints: (
 );
 
 /* Sizes */
-$gutters-header: (
-  'mobile': 5px,
-  'tablet': 20px,
-  'desktop': 40px,
+$sizes-img: (
+  'mobile': 60px,
+  'tablet': 70px,
+  'desktop': 80px,
 );
-$gutters-header-profile: (
-  'mobile': 5px,
-  'tablet': 15px,
-  'desktop': 20px,
-);
-$gutters-nav-item: (
-  'mobile': 10px,
-  'tablet': 20px,
-  'desktop': 25px,
-);
-$gutter-searchbox: (
-  'mobile': 5px,
+$sizes-button: (
+  'mobile': 20px,
   'tablet': 30px,
   'desktop': 40px,
 );
-$gutter-toggle: 3px;
-$gutter-alert-slide: 15px;
-$gutter-social-card: 15px;
-$gutter-member: 15px;
-$padding-social-card-horizontal: 30px;
-$margin-searchbox: 10px;
-$height-toggle: 30px;
-$height-searchbox: 30px;
-$height-web-header: 55px;
-$height-page-header: 50px;
-$height-section-header: 40px;
-$height-traffic-canvas: 320px;
-$height-button: 50px;
-$width-alert: 250px;
-$width-hint: 150px;
-$width-social-card: 350px;
-$width-toggle: 100px;
-$widths-nav: (
-  'mobile': 100%,
-  'tablet': 75px,
-  'desktop': 100px,
+$radius-card: 10px;
+$padding-main: 3%;
+$gutter-card: 30px;
+$gutter-txt: 3px;
+$paddings-card: (
+  'mobile': 3px,
+  'tablet': 7px,
+  'desktop': 10px,
+);
+$widths-modal: (
+  'mobile': 80%,
+  'tablet': 60%,
+  'desktop': 40%,
+);
+$heights-modal: (
+  'mobile': 95%,
+  'tablet': 85%,
+  'desktop': 75%,
+);
+$paddings-modal: (
+  'mobile': 15px 5px,
+  'tablet': 20px 10px,
+  'desktop': 30px 20px,
+);
+$offsets-horizontal-button: (
+  'mobile': 0,
+  'tablet': 5%,
+  'desktop': 10%,
+);
+$paddings-header: (
+  'mobile': 5px,
+  'tablet': 15px,
+  'desktop': 25px,
 );
 $widths-searchbox: (
-  'mobile': 100px,
-  'tablet': 175px,
-  'desktop': 250px,
+  'mobile': 80%,
+  'tablet': 70%,
+  'desktop': 60%,
 );
-$widths-alert-slide: (
-  'mobile': 97.5%,
-  'tablet': 96%,
-  'desktop': 94.5%,
-);
-$size-toggle: 24px;
-$paddings-scale: (
-  'mobile': 5px,
-  'tablet': 10px,
-  'desktop': 15px,
-);
-$radius-sm: 2.5px;
-$radius-md: 5px;
-$radius-lg: 7.5px;
-$padding-main-header: 5px;
-$padding-alert-slide: 15px;
-$padding-section: (
-  'mobile': 5px,
-  'tablet': 10px,
-  'desktop': 20px,
-);
-$padding-hint: 15px;
-
-/* Button */
+$height-searchbox: 35px;
+$padding-searchbox: 5px;
 
 /* Colors */
-$color-bg-primary-darker: rgb(77, 76, 114);
-$color-bg-primary-lighter: rgb(116, 119, 191);
-$color-bg-secondary: rgb(245, 245, 245);
-$color-profile-border: white;
-$color-txt-primary: white;
-$color-txt-secondary: black;
-$color-icon-unselected: rgb(159, 158, 179);
-$color-scale-selected: rgb(133, 219, 129);
-$color-grid: rgb(215, 215, 215);
+$color-bg-darker: rgb(155, 155, 155);
+$color-bg-medium: rgb(205, 205, 205);
+$color-bg-lighter: rgb(235, 235, 235);
+$color-txt-darker: black;
+$color-txt-lighter: rgb(75, 75, 75);
 
 /* Fonts */
-$font-family-primary: 'Open Sans', sans-serif;
+$font-family-primary: 'Merriweather', serif;
 $font-family-secondary: 'Roboto', sans-serif;
-$font-size-lg: 24px;
-$font-size-md: 16px;
-$font-size-sm: 12px;
-
-/* Images */
-$icon-size: 30px;
-$img-size: 40px;
-$social-size: 40px;
-$social-container-size: 70px;
+$fonts-size-lg: (
+  'mobile': 15px,
+  'tablet': 16px,
+  'desktop': 17px,
+);
+$fonts-size-md: (
+  'mobile': 12px,
+  'tablet': 13px,
+  'desktop': 14px,
+);
+$fonts-size-sm: (
+  'mobile': 7px,
+  'tablet': 8px,
+  'desktop': 9px,
+);
 
 /* Animation */
-$transition-time: 0.5s;
+$transition-time: 0.25s;
 
 /* Derived */
-$columns-main-header: ();
-@each $screen, $width in $gutters-header-profile {
-  $columns-main-header: map-merge($columns-main-header, ($screen: auto $icon-size $width * 2 + $img-size + 75px));
+$card-columns: ();
+@each $screen, $img-size in $sizes-img {
+  $card-columns: map-merge($card-columns, ($screen: $img-size calc(100% - #{$img-size + $gutter-txt})));
 }
-$columns-body: ();
-@each $screen, $width in $widths-nav {
-  $columns-body: map-merge($columns-body, ($screen: $width auto));
+$card-rows: ();
+@each $screen, $font-size in $fonts-size-sm {
+  $card-rows: map-merge($card-rows, ($screen: auto $font-size + $gutter-txt * 2 auto));}
+$tops-modal: ();
+@each $screen, $height in $heights-modal {
+  $tops-modal: map-merge($tops-modal, ($screen: calc(50% - #{$height / 2})));
 }
-$rows-body: $height-web-header auto;
-$radius-scale: ();
-@each $screen, $padding in $paddings-scale {
-  $radius-scale: map-merge($radius-scale, ($screen: $font-size-md / 2 + $padding));
+$offsets-vertical-button: ();
+@each $screen, $size in $sizes-button {
+  $offsets-vertical-button: map-merge($offsets-vertical-button, ($screen: calc(50% - #{$size / 2})));
+}
+$lefts-overlay: ();
+@each $screen, $size in $widths-modal {
+  $lefts-overlay: map-merge($lefts-overlay, ($screen: calc(50% - #{$size / 2})));
+}
+$half-fonts-lg: ();
+@each $screen, $size in $fonts-size-lg {
+  $half-fonts-lg: map-merge($half-fonts-lg, ($screen: $size / 2));
 }

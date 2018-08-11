@@ -1,120 +1,28 @@
-.header {
-  @include element("main") {
-    width: 100%;
-    grid-area: main-header;
-    background-color: $color-bg-primary-lighter;
-    font-family: $font-family-primary;
-    @include allmedia("padding-left", $gutters-header);
-    @include allmedia("padding-right", $gutters-header);
-    @include grid($layout: "webtitle webtitle webtitle" "icon-alert icon-alert profile-self",
-                  $rows: repeat(2, auto), $align: center,
-                  $columns: 2fr 1fr 1fr, $just: center);
-    @include media("tablet") {
-      @include grid($layout: "webtitle icon-alert profile-self", $rows: $height-web-header - $padding-main-header * 2, $just: stretch);
-      height: $height-web-header;
-    }
-    @include allmedia("grid-template-columns", $columns-main-header);
-    padding-top: $padding-main-header;
-    padding-bottom: $padding-main-header;
-    align-items: center;
-    .icon__alert-container {
-      grid-area: icon-alert;
-    }
-    .profile__self {
-      @include allmedia("padding-left", $gutters-header-profile);
-      @include allmedia("margin-left", $gutters-header-profile);
-      @include flex($dir: row, $align-coaxis: center);
-      box-shadow: inset 1px 0 0 0 lighten($color-bg-primary-darker, 10%);
-      & > .profile__name {
-        @include allmedia("margin-left", $gutters-header-profile);
-      }
-    }
-  }
-  @include element("webtitle") {
-    grid-area: webtitle;
-    font-size: $font-size-lg;
-    color: $color-txt-primary;
-    text-align: center;
-    @include media("tablet") {
-      text-align: left;
-    }
-  }
-  @include element("page") {
-    @include flex($dir: row, $align-coaxis: center);
-    height: $height-page-header;
-    color: $color-txt-secondary;
-    font-family: $font-family-secondary;
-    width: 100%;
-    .wrapper {
-      grid-area: search-wrapper;
-      @include flex($dir: row, $align-coaxis: center, $just: flex-end);
-      height: 100%;
-      background: $color-bg-secondary;
-      border-left: 1px solid $color-grid;
-      border-bottom: 1px solid $color-grid;
-      .searchbox {
-        @include allmedia("width", $widths-searchbox);
-        transition: width $transition-time * 2 linear;
-        @include allmedia("margin-right", $gutter-searchbox);
-        border: 1.25px solid $color-grid;
-        border-radius: $radius-md;
-        font-size: $font-size-sm;
-        height: $height-searchbox;
-        padding-left: $margin-searchbox;
-        padding-right: $margin-searchbox;
-        background-image: url("../icons/icon-search.svg");
-        background-repeat: no-repeat;
-        background-position: right $height-searchbox * 0.35 bottom 50%;
-        background-color: white;
-        background-size: $height-searchbox * 2 / 3;
-        transition: box-shadow $transition-time ease-out,
-                    color $transition-time ease-out,
-                    font-size $transition-time ease-out;
-        &:focus {
-          outline: none;
-          box-shadow: 0 0 1.75px darken($color-grid, 35%);
-          color: $color-bg-primary-lighter;
-          font-size: $font-size-md;
-        }
-        &::placeholder {
-          font-weight: normal;
-          color: $color-grid;
-        }
-      }
-    }
-    @include grid($layout: "page-header search-wrapper", $align: center,
-                  $columns: 1fr 5fr, $rows: $height-web-header);
-  }
-  @include element("pagetitle") {
-    grid-area: page-header;
-    margin: 0;
-    min-width: 130px;
-    font-weight: 400;
-    font-size: $font-size-lg;
-    text-align: center;
-  }
-  @include element("section") {
-    width: 100%;
-  }
-  @include element("sectiontitle") {
-    text-align: left;
-    font-size: $font-size-md;
-    font-weight: normal;
-    font-family: $font-family-primary;
-  }
-  @include element("social") {
-    grid-area: header-social;
-    text-align: center;
-    font-family: $font-family-secondary;
-    margin-top: $gutter-social-card;
-    margin-bottom: $gutter-social-card / 4;
-    font-size: $font-size-md;
-  }
-  @include element("member") {
-    grid-area: member-name;
-    max-width: 175px;
-    @include media("tablet") {
-      max-width: auto;
-    }
+header {
+  width: auto;
+  @include allmedia("padding", $paddings-header);
+  @include flex($dir: column, $just: center, $align-coaxis: center);
+  background-color: lighten($color-bg-lighter, 10%);
+}
+
+.header__page {
+  display: inline-block;
+  font-family: $font-family-secondary;
+}
+
+.searchbox {
+  display: inline-block;
+  height: $height-searchbox;
+  @include allmedia("width", $widths-searchbox);
+  border-radius: $padding-searchbox;
+  padding: $padding-searchbox;
+  border: 2px solid lighten($color-txt-darker, 50%);
+  font-family: $font-family-primary;
+  @include allmedia("font-size", $fonts-size-md);
+  background-image: url("../images/search.svg");
+  background-repeat: no-repeat;
+  background-position: right 0 bottom 50%;
+  &:focus {
+    outline: none;
   }
 }

@@ -1,0 +1,64 @@
+.overlay {
+  background-color: rgba($color-bg-darker, 0.85);
+  color: $color-txt-lighter;
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.modal {
+  position: fixed;
+  background-color: white;
+  border-radius: $radius-card;
+  font-family: $font-family-primary;
+  @include allmedia("width", $widths-modal);
+  @include allmedia("left", $lefts-overlay);
+  @include allmedia("min-height", $heights-modal);
+  @include allmedia("top", $tops-modal);
+  @include allmedia("font-size", $fonts-size-sm);
+  @include allmedia("padding", $paddings-modal);
+  @include flex($dir: column, $just: space-around, $align-coaxis: center);
+  .user__address {
+    text-transform: capitalize;
+    text-align: center;
+  }
+  p {
+    margin-top: $gutter-txt;
+    margin-bottom: 0;
+  }
+  hr {
+    width: 100%;
+    height: 0;
+    border-top: 1px solid $color-bg-darker;
+  }
+}
+
+.button {
+  @include element("previous") {
+    position: fixed;
+    @extend %button;
+    @include allmedia("left", $offsets-horizontal-button);
+    @include allmedia("width", $sizes-button);
+    @include allmedia("height", $sizes-button);
+  }
+  @include element("next") {
+    position: fixed;
+    @extend %button;
+    @include allmedia("right", $offsets-horizontal-button);
+    @include allmedia("width", $sizes-button);
+    @include allmedia("height", $sizes-button);
+  }
+  @include element("close") {
+    position: absolute;
+    user-select: none;
+    font-family: $font-family-secondary;
+    @extend %button;
+    @include allmedia("font-size", $fonts-size-lg);
+    @include allmedia("right", $half-fonts-lg);
+    @include allmedia("top", $half-fonts-lg);
+  }
+}
